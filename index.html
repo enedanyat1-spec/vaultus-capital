@@ -5,18 +5,43 @@
   <style>
     body {
       margin: 0;
+      font-family: <!DOCTYPE html>
+<html>
+<head>
+  <title>Vaultus Capital</title>
+
+  <style>
+    body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #0b0e11;
-      color: #eaecef;
+      color: white;
     }
 
     header {
       background: #161a1e;
       padding: 15px;
       text-align: center;
+      color: #f0b90b;
       font-size: 22px;
       font-weight: bold;
-      color: #f0b90b;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1642790106117-e829e14a795f');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
     }
 
     .container {
@@ -50,6 +75,12 @@
     .hidden {
       display: none;
     }
+
+    .images img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 
@@ -57,24 +88,20 @@
 
 <header>Vaultus Capital</header>
 
+<!-- HERO SECTION -->
+<div class="hero">
+  <h1>Welcome to Vaultus Capital Investment</h1>
+</div>
+
 <div class="container">
 
-  <!-- LANDING PAGE -->
-  <div id="home">
-    <div class="card">
-      <h2>Welcome to Vaultus Capital</h2>
-      <p>Secure crypto trading and investment platform.</p>
-      <button onclick="showRegister()">Register</button>
-    </div>
-  </div>
-
   <!-- REGISTER -->
-  <div id="register" class="hidden">
+  <div id="register">
     <div class="card">
       <h3>Create Account</h3>
       <input id="name" placeholder="Full Name">
-      <input id="email" placeholder="Email">
-      <input id="password" placeholder="Password" type="password">
+      <input placeholder="Email">
+      <input placeholder="Password" type="password">
       <button onclick="register()">Create Account</button>
     </div>
   </div>
@@ -83,35 +110,34 @@
   <div id="dashboard" class="hidden">
 
     <div class="card">
-      <h3>Dashboard</h3>
-      <p id="welcomeUser"></p>
+      <h3 id="welcomeUser"></h3>
     </div>
 
     <div class="card">
       <h3>Deposit Crypto</h3>
+
       <p><b>USDT / ETH (ERC20)</b></p>
-      <p id="ethAddress">0xecb44c621ed78375f55a8e0d41eaf774edf8574c</p>
-      <button onclick="copy('ethAddress')">Copy Address</button>
+      <p id="eth">0xecb44c621ed78375f55a8e0d41eaf774edf8574c</p>
+      <button onclick="copy('eth')">Copy</button>
 
       <br><br>
 
       <p><b>Bitcoin (BTC)</b></p>
-      <p id="btcAddress">bc1qf2axcze4duqzeqnf07sk6txns02cft5qarzf63</p>
-      <button onclick="copy('btcAddress')">Copy Address</button>
+      <p id="btc">bc1qf2axcze4duqzeqnf07sk6txns02cft5qarzf63</p>
+      <button onclick="copy('btc')">Copy</button>
     </div>
 
     <div class="card">
-      <h3>Trading Overview</h3>
-      <p>📈 Strategy: AI Crypto Trading</p>
-      <p>📊 Market: BTC / ETH / USDT</p>
-      <p>💹 Daily Growth: 2% - 5%</p>
+      <h3>Trading Strategy</h3>
+      <p>📈 AI-powered crypto trading</p>
+      <p>💹 Daily growth: 2% - 5%</p>
     </div>
 
-    <div class="card">
-      <h3>Recent Activity (Demo)</h3>
-      <p>User A deposited $100</p>
-      <p>User B deposited $250</p>
-      <p>User C withdrew $80</p>
+    <!-- IMAGES -->
+    <div class="images">
+      <img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f">
+      <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040">
+      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3">
     </div>
 
   </div>
@@ -119,31 +145,25 @@
 </div>
 
 <script>
-
-function showRegister() {
-  document.getElementById('home').style.display = 'none';
-  document.getElementById('register').style.display = 'block';
-}
-
 function register() {
-  let name = document.getElementById('name').value;
+  let name = document.getElementById("name").value;
+
   if(name === "") {
     alert("Enter your name");
     return;
   }
 
-  document.getElementById('register').style.display = 'none';
-  document.getElementById('dashboard').style.display = 'block';
-  document.getElementById('welcomeUser').innerText = "Welcome, " + name;
+  document.getElementById("register").style.display = "none";
+  document.getElementById("dashboard").style.display = "block";
+  document.getElementById("welcomeUser").innerText = "Welcome, " + name;
 }
 
 function copy(id) {
   let text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text);
-  alert("Address copied!");
+  alert("Copied!");
 }
-
 </script>
 
 </body>
-  </html>
+</html>
