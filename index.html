@@ -1,169 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vaultus Capital</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: <!DOCTYPE html>
-<html>
-<head>
-  <title>Vaultus Capital</title>
+<title>Vaultus Capital</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0e11;
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0e11;
+  color: #eaecef;
+}
 
-    header {
-      background: #161a1e;
-      padding: 15px;
-      text-align: center;
-      color: #f0b90b;
-      font-size: 22px;
-      font-weight: bold;
-    }
+/* HEADER */
+header {
+  background: #161a1e;
+  padding: 15px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #f0b90b;
+}
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1642790106117-e829e14a795f');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+/* HERO SECTION */
+.hero {
+  background: url('https://images.unsplash.com/photo-1640340434855-6084b1f4901c') no-repeat center;
+  background-size: cover;
+  padding: 80px 20px;
+  text-align: center;
+}
 
-    .hero h1 {
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 10px;
-    }
+.hero h1 {
+  font-size: 32px;
+  background: rgba(0,0,0,0.6);
+  display: inline-block;
+  padding: 15px;
+  border-radius: 10px;
+}
 
-    .container {
-      padding: 20px;
-    }
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
 
-    .card {
-      background: #161a1e;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
+/* CARD */
+.card {
+  background: #161a1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
 
-    button {
-      background: #f0b90b;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 5px;
-    }
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
 
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 5px;
-      border: none;
-    }
+/* BUTTON */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f0b90b;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .hidden {
-      display: none;
-    }
+/* TRADING SECTION */
+.trading {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
 
-    .images img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-  </style>
+.trade-box {
+  background: #1e2329;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.trade-box h3 {
+  color: #f0b90b;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: gray;
+}
+</style>
+
 </head>
 
 <body>
 
-<header>Vaultus Capital</header>
+<header>
+Vaultus Capital
+</header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div class="hero">
-  <h1>Welcome to Vaultus Capital Investment</h1>
+  <h1>Welcome to Vaultus Capital Trading Investment</h1>
 </div>
 
 <div class="container">
 
-  <!-- REGISTER -->
-  <div id="register">
-    <div class="card">
-      <h3>Create Account</h3>
-      <input id="name" placeholder="Full Name">
-      <input placeholder="Email">
-      <input placeholder="Password" type="password">
-      <button onclick="register()">Create Account</button>
-    </div>
+<!-- REGISTER -->
+<div class="card">
+  <h2>Create Account</h2>
+  <input type="text" placeholder="Full Name">
+  <input type="email" placeholder="Email">
+  <input type="password" placeholder="Password">
+  <button>Create Account</button>
+</div>
+
+<!-- TRADING INFO -->
+<div class="card">
+  <h2>How Trading Works</h2>
+  <p>
+    Trading involves buying and selling digital assets like Bitcoin (BTC), Ethereum (ETH), and USDT.
+    Market prices move based on demand and supply, giving traders opportunities to profit.
+  </p>
+</div>
+
+<!-- MARKET SECTION -->
+<div class="card trading">
+  
+  <div class="trade-box">
+    <h3>Bitcoin (BTC)</h3>
+    <p>Live market movements and price volatility create trading opportunities.</p>
   </div>
 
-  <!-- DASHBOARD -->
-  <div id="dashboard" class="hidden">
+  <div class="trade-box">
+    <h3>Ethereum (ETH)</h3>
+    <p>Popular for smart contracts and active daily trading volume.</p>
+  </div>
 
-    <div class="card">
-      <h3 id="welcomeUser"></h3>
-    </div>
-
-    <div class="card">
-      <h3>Deposit Crypto</h3>
-
-      <p><b>USDT / ETH (ERC20)</b></p>
-      <p id="eth">0xecb44c621ed78375f55a8e0d41eaf774edf8574c</p>
-      <button onclick="copy('eth')">Copy</button>
-
-      <br><br>
-
-      <p><b>Bitcoin (BTC)</b></p>
-      <p id="btc">bc1qf2axcze4duqzeqnf07sk6txns02cft5qarzf63</p>
-      <button onclick="copy('btc')">Copy</button>
-    </div>
-
-    <div class="card">
-      <h3>Trading Strategy</h3>
-      <p>📈 AI-powered crypto trading</p>
-      <p>💹 Daily growth: 2% - 5%</p>
-    </div>
-
-    <!-- IMAGES -->
-    <div class="images">
-      <img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f">
-      <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040">
-      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3">
-    </div>
-
+  <div class="trade-box">
+    <h3>USDT (Stablecoin)</h3>
+    <p>Used for stable trading and storing value during volatility.</p>
   </div>
 
 </div>
 
-<script>
-function register() {
-  let name = document.getElementById("name").value;
+<!-- IMAGE SECTION -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3" width="100%" style="border-radius:10px;">
+</div>
 
-  if(name === "") {
-    alert("Enter your name");
-    return;
-  }
+</div>
 
-  document.getElementById("register").style.display = "none";
-  document.getElementById("dashboard").style.display = "block";
-  document.getElementById("welcomeUser").innerText = "Welcome, " + name;
-}
-
-function copy(id) {
-  let text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text);
-  alert("Copied!");
-}
-</script>
+<footer>
+© 2026 Vaultus Capital. All rights reserved.
+</footer>
 
 </body>
 </html>
