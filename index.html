@@ -1,17 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Vaultus Capital</title>
+  <title>Vaultus Capital</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0e11;
+      color: #eaecef;
+    }
+
+    header {
+      background: #161a1e;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #f0b90b;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #f0b90b;
+    }
+
+    .box {
+      background: #161a1e;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .wallet-item {
+      margin-top: 15px;
+      padding: 15px;
+      background: #0b0e11;
+      border-radius: 8px;
+    }
+
+    .wallet-item p {
+      color: #00ffcc;
+      word-break: break-all;
+    }
+
+    button {
+      background: #f0b90b;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+  </style>
 </head>
-<body style="background:black;color:white;text-align:center;">
 
-<h1>Vaultus Capital</h1>
+<body>
 
-<p>Welcome to my crypto dashboard</p>
+<header>Vaultus Capital</header>
 
-<button onclick="window.location.href='https://wa.me/234XXXXXXXXXX'">
-Send Proof on WhatsApp
-</button>
+<div class="container">
+
+  <h1>Welcome to Vaultus Capital</h1>
+  <p>Secure crypto investment platform.</p>
+
+  <!-- WALLET SECTION -->
+  <div class="box">
+    <h2>Deposit Crypto</h2>
+
+    <div class="wallet-item">
+      <h3>USDT / ETH (ERC20)</h3>
+      <p id="ethAddress">0xecb44c621ed78375f55a8e0d41eaf774edf8574c</p>
+      <button onclick="copyETH()">Copy Address</button>
+    </div>
+
+    <div class="wallet-item">
+      <h3>Bitcoin (BTC)</h3>
+      <p id="btcAddress">bc1qf2axcze4duqzeqnf07sk6txns02cft5qarzf63</p>
+      <button onclick="copyBTC()">Copy Address</button>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="box">
+    <h2>About Us</h2>
+    <p>Vaultus Capital provides modern crypto investment solutions with secure and transparent systems.</p>
+  </div>
+
+  <!-- DEMO ACTIVITY -->
+  <div class="box">
+    <h2>Recent Activity (Demo)</h2>
+    <p>User A deposited $100</p>
+    <p>User B withdrew $50</p>
+    <p>User C deposited $250</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="box">
+    <h2>Contact Us</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </div>
+
+</div>
+
+<script>
+function copyETH() {
+  navigator.clipboard.writeText(document.getElementById("ethAddress").innerText);
+  alert("ETH address copied!");
+}
+
+function copyBTC() {
+  navigator.clipboard.writeText(document.getElementById("btcAddress").innerText);
+  alert("BTC address copied!");
+}
+</script>
 
 </body>
-</html>
+  </html>
