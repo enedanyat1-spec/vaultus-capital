@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Vaultus Capital</title>
-
-<style>
-b<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valtus Capital Crypto Investment</title>
+<title>Valtus Capital Investment</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial;
-    background: #0d1117;
+    font-family: Arial, sans-serif;
+    background: #0b0f19;
     color: white;
 }
 
 /* HEADER */
 .header {
+    background: #000;
+    color: gold;
     text-align: center;
     padding: 15px;
-    background: black;
-    color: gold;
     font-size: 22px;
+    font-weight: bold;
 }
 
 /* HERO */
 .hero {
-    background: url('https://images.unsplash.com/photo-1621761191319-c6fb62004040') no-repeat center/cover;
-    height: 300px;
+    background: url('https://images.unsplash.com/photo-1640161704729-cbe966a08476') no-repeat center/cover;
+    height: 350px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .hero-text {
     background: rgba(0,0,0,0.7);
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -48,53 +43,53 @@ body {
     padding: 20px;
 }
 
+/* IMAGE GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 /* CRYPTO BOX */
 .crypto-box {
-    background: #161b22;
+    background: #121826;
     padding: 15px;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 8px;
 }
 
-/* STATS */
-.stats {
-    background: #161b22;
-    padding: 20px;
-    text-align: center;
-}
-
-.stat {
-    margin: 10px;
-}
-
 /* SERVICES */
-.services {
-    padding: 20px;
-}
-
 .service {
-    background: #161b22;
-    margin: 10px;
-    padding: 10px;
+    background: #121826;
+    padding: 15px;
+    margin: 10px 0;
 }
 
 /* FORM */
 .form {
-    background: #161b22;
-    margin: 20px;
+    background: #121826;
     padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
+    border: none;
 }
 
 button {
     background: gold;
+    padding: 12px;
     border: none;
-    padding: 10px;
     width: 100%;
     font-weight: bold;
 }
@@ -109,17 +104,24 @@ button {
 
 <div class="hero">
     <div class="hero-text">
-        <h2>Trade & Invest in Cryptocurrency</h2>
-        <p>Bitcoin • USDT • Ethereum • Forex</p>
+        <h2>Advanced Trading & Crypto Investment</h2>
+        <p>Bitcoin • Ethereum • USDT • Forex</p>
     </div>
 </div>
 
 <div class="section">
-    <h3>About Platform</h3>
+    <h3>Professional Trading Platform</h3>
     <p>
-        We provide advanced crypto trading strategies, secure investment plans,
-        and real-time market analysis for investors worldwide.
+        We provide advanced crypto trading strategies, deep market analysis,
+        and secure investment systems for serious investors.
     </p>
+</div>
+
+<!-- 🔥 TRADING IMAGES SECTION -->
+<div class="grid">
+    <img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476">
+    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3">
+    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a">
 </div>
 
 <div class="section">
@@ -127,31 +129,23 @@ button {
 
     <div class="crypto-box">
         <b>USDT (ERC20)</b><br>
-        Your wallet address here<br>
+        Your wallet address here<br><br>
         <button>Copy Address</button>
     </div>
 
     <div class="crypto-box">
         <b>Bitcoin (BTC)</b><br>
-        Your wallet address here<br>
+        Your wallet address here<br><br>
         <button>Copy Address</button>
     </div>
 </div>
 
-<div class="stats">
-    <h3>Platform Stats</h3>
-    <div class="stat">📅 2003 Founded</div>
-    <div class="stat">💰 $5B+ Transactions</div>
-    <div class="stat">📈 130+ Traders</div>
-    <div class="stat">🌍 Global Investors</div>
-</div>
-
-<div class="services">
+<div class="section">
     <h3>Trading Services</h3>
 
     <div class="service">📊 Crypto Trading Strategy</div>
+    <div class="service">📈 Live Market Signals</div>
     <div class="service">💼 Investment Plans</div>
-    <div class="service">📉 Market Analysis</div>
     <div class="service">🔒 Secure Wallet System</div>
 </div>
 
