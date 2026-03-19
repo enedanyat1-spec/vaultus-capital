@@ -9,32 +9,31 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0b0f19;
-    color: white;
+    background: #f5f5f5;
 }
 
 /* HEADER */
 .header {
-    background: #000;
+    background: #0d1117;
     color: gold;
     text-align: center;
     padding: 15px;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
-    background: url('https://images.unsplash.com/photo-1640161704729-cbe966a08476') no-repeat center/cover;
-    height: 350px;
+    background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3') no-repeat center/cover;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero-text {
-    background: rgba(0,0,0,0.7);
-    padding: 25px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
@@ -43,55 +42,49 @@ body {
     padding: 20px;
 }
 
-/* IMAGE GRID */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
+/* STATS */
+.stats {
+    background: white;
     padding: 20px;
+    text-align: center;
 }
 
-.grid img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* CRYPTO BOX */
-.crypto-box {
-    background: #121826;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
+.stat-box {
+    margin: 15px 0;
+    font-size: 22px;
 }
 
 /* SERVICES */
+.services {
+    background: #0d1117;
+    color: white;
+    padding: 20px;
+}
+
 .service {
-    background: #121826;
-    padding: 15px;
-    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #333;
 }
 
 /* FORM */
 .form {
-    background: #121826;
+    background: #1c1c1c;
     padding: 20px;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 input {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     margin: 10px 0;
-    border: none;
 }
 
 button {
     background: gold;
-    padding: 12px;
     border: none;
+    padding: 10px;
     width: 100%;
-    font-weight: bold;
 }
 </style>
 </head>
@@ -99,54 +92,36 @@ button {
 <body>
 
 <div class="header">
-    Valtus Capital Crypto Investment
+    Valtus Capital Investment
 </div>
 
 <div class="hero">
     <div class="hero-text">
-        <h2>Advanced Trading & Crypto Investment</h2>
-        <p>Bitcoin • Ethereum • USDT • Forex</p>
+        <h2>We collaborate with investors and traders</h2>
+        <p>Grow your crypto and financial investments securely</p>
     </div>
 </div>
 
 <div class="section">
-    <h3>Professional Trading Platform</h3>
+    <h3>About Us</h3>
     <p>
-        We provide advanced crypto trading strategies, deep market analysis,
-        and secure investment systems for serious investors.
+        Valtus Capital Investment is a modern trading platform focused on cryptocurrency,
+        forex, and long-term investment strategies.
     </p>
 </div>
 
-<!-- 🔥 TRADING IMAGES SECTION -->
-<div class="grid">
-    <img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476">
-    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3">
-    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a">
+<div class="stats">
+    <div class="stat-box">📅 2003 - Year Founded</div>
+    <div class="stat-box">💰 $5B+ Transactions</div>
+    <div class="stat-box">📊 130+ Experience</div>
+    <div class="stat-box">🌍 250+ Global Clients</div>
 </div>
 
-<div class="section">
-    <h3>Deposit Crypto</h3>
-
-    <div class="crypto-box">
-        <b>USDT (ERC20)</b><br>
-        Your wallet address here<br><br>
-        <button>Copy Address</button>
-    </div>
-
-    <div class="crypto-box">
-        <b>Bitcoin (BTC)</b><br>
-        Your wallet address here<br><br>
-        <button>Copy Address</button>
-    </div>
-</div>
-
-<div class="section">
-    <h3>Trading Services</h3>
-
-    <div class="service">📊 Crypto Trading Strategy</div>
-    <div class="service">📈 Live Market Signals</div>
-    <div class="service">💼 Investment Plans</div>
-    <div class="service">🔒 Secure Wallet System</div>
+<div class="services">
+    <h3>Our Services</h3>
+    <div class="service">💼 Financing</div>
+    <div class="service">📊 Advisory</div>
+    <div class="service">🔄 Restructuring</div>
 </div>
 
 <div class="form">
