@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vaultus Capital</title>
+</head>
+<body style="background:black;color:white;text-align:center;">
+
+<h1>Vaultus Capital</h1>
+
+<p>Welcome to my crypto dashboard</p>
+
+<button onclick="window.location.href='https://wa.me/234XXXXXXXXXX'">
+Send Proof on WhatsApp
+</button>
+
+</body>
+</html>
